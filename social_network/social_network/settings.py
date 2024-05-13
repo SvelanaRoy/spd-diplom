@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,9 +82,9 @@ WSGI_APPLICATION = 'social_network.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dj_diplom',
-        'USER': 'adilet',
-        'PASSWORD': '1',
+        'NAME': 'testFinal',
+        'USER': 'postgres',
+        'PASSWORD': 'abc123',
     }
 }
 
@@ -123,6 +124,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # настройте STATIC_ROOT, MEDIA_URL и MEDIA_ROOT
 
 # Default primary key field type
